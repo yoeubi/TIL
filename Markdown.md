@@ -110,6 +110,15 @@ This is a normal paragraph
 ## 7.링크
 
 - 참조링크
+
+```
+[이름][아이디]
+[아이디] : 주소 "title"
+```
+[Google][1]
+
+[1]: http://google.com""
+
 - 인라인 링크
 
 ```
