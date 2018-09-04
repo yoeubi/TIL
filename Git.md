@@ -54,5 +54,5 @@
 
   1. ssh-keygen
   1. cat ~/.ssh/id_rsa.pub
-  2. Github  설정에서 SSH key 등록
+  2. Github 설정에서 SSH key 등록(~/.ssh/id_rsa.pub 안의 내용 )
 
