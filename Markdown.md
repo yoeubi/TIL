@@ -48,11 +48,10 @@
 
 ## 4.목록
 
-1.첫번째
 
-1.두번쨰
-
-1.세번째
+1. 첫번째
+1. 두번쨰
+1. 세번째
 
 ```
 1.첫번째
@@ -70,3 +69,17 @@
     + 3단계
       = 4단계
 ```
+
+## 5.코드
+
+```
+This is a normal paragraph
+```
+
+```
+``` This is a normal paragraph ```
+```
+
+<code>
+  This is a normal paragraph
+</code>
