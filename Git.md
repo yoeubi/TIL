@@ -45,13 +45,18 @@
 1. `git push -u origin master`
 
 ---
-- git remote get-url origin
-- origin이라는 별명으로 저장된 url을 꺼내오는것
+1. `git remote get-url origin`
+    : origin이라는 별명으로 저장된 url을 꺼내오는것
 
-- git remote remove origin : 기존 주소 삭제
+1. `git remote remove origin` : 기존 주소 삭제
 
-- Are you sure you want to continue connecting (yes/no)? y
-- Please type 'yes' or 'no': yes
+## Git push alert창
+
+```
+Are you sure you want to continue connecting (yes/no)? y
+Please type 'yes' or 'no': yes
+```
+
 처음 깃 저장소를 만들때 뜨는 문구이다 전부 yes를 하면 된다.
 
 - git push 하면 저장소로 넘어간다
@@ -71,5 +76,7 @@ push는 로컬저장소에 저장된것을 원격저장소에 옮긴다.
 
 ## SSH 에러
 
-`옵션 -> SSH 클라이언트 -> OpenSSH로 `
+`옵션 -> SSH 클라이언트 -> OpenSSH로 변경`
+
+
 
