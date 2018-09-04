@@ -40,13 +40,13 @@
   
 ---
 
--git 은 파일만 관리한다 빈폴더를 관리 하지 않는다.
--.gitkeep 파일명 앞에 .을 붙이면 숨긴파일이 된다 ( 리눅스 , 맥 )
+- git 은 파일만 관리한다 빈폴더를 관리 하지 않는다.
+- .gitkeep 파일명 앞에 .을 붙이면 숨긴파일이 된다 ( 리눅스 , 맥 )
 
 ## Git 원격 저장소 만들기
 
 
-  1.ssh-keygen
-  1.cat ~/.ssh/id_rsa.pub
-  2.Github  설정에서 SSH key 등록
+  1. ssh-keygen
+  1. cat ~/.ssh/id_rsa.pub
+  2. Github  설정에서 SSH key 등록
 
