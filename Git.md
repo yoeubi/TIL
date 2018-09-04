@@ -2,9 +2,8 @@
 
 ## 초기설정
 
-  git config --global user.name "<영문이름>" 
-  
-  git config --global user.email "<이메일 주소>"  
+  `git config --global user.name "<영문이름>"`   
+  `git config --global user.email "<이메일 주소>" ` 
   
 
 ## 저장소 만들기
