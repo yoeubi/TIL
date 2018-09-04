@@ -90,3 +90,20 @@ This is a normal paragraph
   This is a normal paragraph
 </code>
 ```
+
+## 6.수평선
+
+* * * 
+***
+*****
+- - - 
+--------------
+
+```
+* * * 
+***
+*****
+- - - 
+--------------
+```
+
