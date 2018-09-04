@@ -1,10 +1,8 @@
 # Git
 
----
 
 **Git bash에서**
 
----
 
 ## 초기설정
 
@@ -51,8 +49,39 @@
 
 ## Git 원격 저장소 만들기
 
-
   1. ssh-keygen
   1. cat ~/.ssh/id_rsa.pub
   2. Github 설정에서 SSH key 등록(~/.ssh/id_rsa.pub 안의 내용 )
 
+## Git push
+
+- git remote add origin git@github.com:yoeubi/fds-git.git
+- git remote add [이름] [깃주소] 
+- origin 이라는 별명으로 주소를 저장하는 것이다.
+
+- git push -u origin master
+
+---
+- git remote get-url origin
+- origin이라는 별명으로 저장된 url을 꺼내오는것
+
+- git remote remove origin : 기존 주소 삭제
+
+- Are you sure you want to continue connecting (yes/no)? y
+- Please type 'yes' or 'no': yes
+처음 깃 저장소를 만들때 뜨는 문구이다 전부 yes를 하면 된다.
+
+- git push 하면 저장소로 넘어간다
+
+commit 과 push 의 차이 
+commit 은 로컬저장소에 저장
+push는 로컬저장소에 저장된것을 원격저장소에 옮긴다.
+
+## Git pull
+
+
+## Visual Studio Code에서 변경
+
+2가지 방식
+1.커밋메서지를 입력하고 체크를클릭
+1.선택한 것만 올리고 싶으면 +버튼을 누르고 메세지쓰고 체크를 클릭
