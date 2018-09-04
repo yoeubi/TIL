@@ -1,4 +1,4 @@
-# Git
+# Git(in Git bash)
 
 ## 초기설정
 
@@ -8,23 +8,23 @@
 
 ## 저장소 만들기
 
-  git init
+  `git init`
   
 ## 저장소 상태 확인
 
-  git status
+  `git status`
 
 ## 작업 흐름
 
-  git add "<파일명>" 
+  `git add "<파일명>"` 
   
-  git add .         현재 모든 파일들을 다 올리겠다
+  `git add .`         현재 모든 파일들을 다 올리겠다
   
-  git commit -m "<커밋의 메세지>"
+  `git commit -m "<커밋의 메세지>"`
   
-  git log           로그를 볼 수 있다. q누르면 나간다.
+  `git log`           로그를 볼 수 있다. q누르면 나간다.
   
-  git checkout "커밋의 일련번호"
+  `git checkout "커밋의 일련번호"`
   
 
 - git 은 파일만 관리한다 빈폴더를 관리 하지 않는다.
