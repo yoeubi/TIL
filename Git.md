@@ -39,11 +39,10 @@
 
 ## Git push
 
-- git remote add origin git@github.com:yoeubi/fds-git.git
-- git remote add [이름] [깃주소] 
-- origin 이라는 별명으로 주소를 저장하는 것이다.
+1. `git remote add origin [깃주소]` 
+    origin 이라는 별명으로 주소를 저장하는 것이다.
 
-- git push -u origin master
+1. `git push -u origin master`
 
 ---
 - git remote get-url origin
