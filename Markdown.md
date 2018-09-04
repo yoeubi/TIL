@@ -110,3 +110,17 @@ This is a normal paragraph
 ## 7.링크
 
 - 참조링크
+- 인라인 링크
+
+```
+[제목](링크주소)
+```
+
+[link](www.google.co.kr)
+
+- 자동 연결
+
+```
+<http://www.google.co.kr>
+```
+<http://www.google.co.kr>
