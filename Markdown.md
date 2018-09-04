@@ -83,3 +83,10 @@ This is a normal paragraph
 <code>
   This is a normal paragraph
 </code>
+
+
+```
+<code>
+  This is a normal paragraph
+</code>
+```
