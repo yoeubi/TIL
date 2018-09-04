@@ -3,6 +3,7 @@
 ## 초기설정
 
   `git config --global user.name "<영문이름>"`   
+  
   `git config --global user.email "<이메일 주소>" ` 
   
 
@@ -32,9 +33,9 @@
 
 ## Git 원격 저장소 만들기
 
-  1. ssh-keygen
-  1. cat ~/.ssh/id_rsa.pub
-  2. Github 설정에서 SSH key 등록(~/.ssh/id_rsa.pub 안의 내용 )
+  1. `ssh-keygen` 입력
+  1. `cat ~/.ssh/id_rsa.pub` 입력
+  1. Github 설정에서 SSH key 등록(~/.ssh/id_rsa.pub 안의 내용 )
 
 ## Git push
 
