@@ -44,7 +44,10 @@
 
 1. `git push -u origin master`
 
+1. `git push` 하면 저장소로 넘어간다
+
 ---
+
 1. `git remote get-url origin`
     : origin이라는 별명으로 저장된 url을 꺼내오는것
 
@@ -59,7 +62,6 @@ Please type 'yes' or 'no': yes
 
 처음 깃 저장소를 만들때 뜨는 문구이다 전부 yes를 하면 된다.
 
-- git push 하면 저장소로 넘어간다
 
 ## commit 과 push 의 차이 
 
@@ -68,6 +70,7 @@ push는 로컬저장소에 저장된것을 원격저장소에 옮긴다.
 
 ## Git pull
 
+`git pull`
 
 ## Visual Studio Code에서 변경
 
