@@ -146,3 +146,15 @@ __볼드체__
 ++밑줄++
 
 ~~취소선~~
+
+## 9.이미지
+
+```
+![대체 텍스트](경로)
+![대체 텍스트](경로, title)
+```
+![석촌호수 러버덕](http://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0)
+![석촌호수 러버덕](http://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0 "RubberDuck")
+
+> 사이즈 조절 기능이 없기떄문에 ``` <img width= height=></img> ```를 사용한다.
+
