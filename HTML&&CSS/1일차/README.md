@@ -226,16 +226,6 @@
 
 - - - 
 
-## 단축키 
-
-- `^/` : 주석 단축키
-
-- `^↑k` : 한줄 삭제
-
-- `alt [방향키]` : 위 아래로 이동
-
-- - - 
-
 ## HTML SNIPPETS 설정
 
 - `.vscode\extensions\abusaidm.html-snippets-0.2.1\snippets` 에 가서 `snippets.json` 파일을 연다음 주석을 풀고 프로그램을 다시 킨다.
