@@ -36,3 +36,9 @@
     p { color : #930212;}
     p { color : #d5727e;} // 우선권을 가진다.
     ```
+
+- - -
+
+참고 사이트
+
+- [class 속성 개수가 11개면 id속성 보다 우선할까요?](https://hashcode.co.kr/questions/5415/2-5-css-%EC%BC%80%EC%8A%A4%EC%BC%80%EC%9D%B4%EB%93%9Ccascade-%EC%97%90%EC%84%9C-%EC%A7%88%EB%AC%B8%EC%9D%B4-%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4)
