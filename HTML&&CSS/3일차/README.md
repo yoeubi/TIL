@@ -72,7 +72,7 @@ header.header
 
 - 플렉스 아이템을 오른쪽으로 정렬 시킬라면 `justify-content`를 쓰면 된다.
 
-### float
+### `float`
 
 - 부모가 아닌 아이템 `li`자체를 선택해서 가로로 배치해야한다.
 
@@ -192,7 +192,7 @@ header.header
 
 - `h2`를 `display : none` 하면 안보이지만 스크린리더가 읽어주지 않는다.
 
-- `visibility : hidden' 하면 글자는 사라지지만 영역은 남아있다 그래서 `position : absolute`로 한 다음 `left: - 9999em`하면 브라우저 바깥으로 나간다. 이 트릭이 가장 보편적이다.
+- `visibility : hidden` 하면 글자는 사라지지만 영역은 남아있다 그래서 `position : absolute`로 한 다음 `left: - 9999em`하면 브라우저 바깥으로 나간다. 이 트릭이 가장 보편적이다.
 
 - 하지만 위의 방법을 사용시 가상커서가 포커스를 받고 나서 다음 것을 찾지 못한다.
 
