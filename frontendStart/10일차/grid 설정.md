@@ -581,9 +581,9 @@ content는 부모가 위드가 하이트에 공간이 있을때 가로 세로 �
 |   |`<grid-template-rows>` / `<grid-template-columns>` |    |
 |   |`<grid-auto-flow>` [`<grid-auto-rows>`  [ / `<grid-auto-columns>`] ] |
 ```
-
+```
 ### 값
-
+```
 ```
 |값|설명|
 |---|---|
