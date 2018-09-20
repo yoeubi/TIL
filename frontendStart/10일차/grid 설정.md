@@ -631,6 +631,7 @@ column 자동 배치 알고리즘 설정에 암시적인 행/열 크기 설정�
 ```
 
 좀 더 복잡하지만 다음 속성을 모두 포함하는 속기형 작성을 사용하면 보다 편리합니다.
+    
     - grid-template-rows
     - grid-template-columns
     - grid-template-areas
