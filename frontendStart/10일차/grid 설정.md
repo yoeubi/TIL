@@ -31,7 +31,7 @@
 
 - `float` , `clear` , `column` , `vertical-align` 속성은 그리드 컨테이너 요소에 적용되지 않습니다.
 
-## column / row 설정
+## `column` / `row` 설정
 
 ```css
 .grid {
@@ -49,7 +49,7 @@
 
 ## 그리드 행/열 템플릿 설정
 
-- 공백으로 구분된 값 리스트를 해석하여 그리고 행(row) , 열(column)을 설정합니다. 각 값은 트랙 크기를 말합니다.
+- 공백으로 구분된 값 리스트를 해석하여 그리고 행(`row`) , 열(`column`)을 설정합니다. 각 값은 트랙 크기를 말합니다.
 
 
 | 속성 | 값 | 비고|
@@ -182,7 +182,7 @@
 
 #### 값
 
-- `<track-size>` : 그리드에서 사용 가능한 단위( px , rem , em , % , fr 등)
+- `<track-size>` : 그리드에서 사용 가능한 단위( `px` , `rem` , `em` , `%` , `fr` 등)
 
 #### 예시 
 
@@ -263,7 +263,7 @@
 
 - `span`은 범위이다. 그리드 아이템의 기본 `span` 값은 1이다.
 - `grid-template`는 `column` 과 `row`의 속기형이며 앞의 값이 `row` 뒤의 값이 `column` 이다.
-- 인덱스가 크면 클수록 마지막 인덱스 번호를 알기 힘든다 그리드 모듈에서 마지막 위치를 -1을 주면 동일하게 작동한다.
+- 인덱스가 크면 클수록 마지막 인덱스 번호를 알기 힘든다 그리드 모듈에서 마지막 위치를 `-1`을 주면 동일하게 작동한다.
 - 순차적인 흐름을 가지고 있으면서 라인 기준으로 위치를 변경할 수 있다.
 
 ## 아이템 순서 설정
@@ -474,7 +474,7 @@ CSS 스타일
 
 ## 행축(row axis), 그리드 아이템 트랙 정렬
 
-- 그리드 컨테이너의 크기보다 작은 그리드 아이템 트랙(px과 같은 고정 단위로 설정된 경우)의 크기라면 , 아이템 트랙을 정렬 할 수 있습니다. 이 속성은 행(row)축을 따라 그리드 아이템 트랙을 정렬합니다. (align-content 속성의 반대)
+- 그리드 컨테이너의 크기보다 작은 그리드 아이템 트랙(px과 같은 고정 단위로 설정된 경우)의 크기라면 , 아이템 트랙을 정렬 할 수 있습니다. 이 속성은 행(`row`)축을 따라 그리드 아이템 트랙을 정렬합니다. (`align-content` 속성의 반대)
 
 |속성|값|비고|
 |---|--|----|
@@ -559,19 +559,19 @@ CSS 스타일
 | `grid`  |   |
 ```
 
-content는 부모가 위드가 하이트에 공간이 있을때 가로 세로 정렬할수 있다.
+- `justify-content` , `align-content`는 부모가 `width`, `height`가 공간이 있을때 가로 세로 정렬할 수 있다.
 
 
 ## 그리드 단축 속성 설정
 
 ```
 - 하나의 속성에 다음 속성들을모두 일괄 설정할 수 있는 grid 속기형 속성입니다.
-    - grid-template-rows
-    - grid-template-columns
-    - grid-template-areas
-    - grid-auto-rows
-    - grid-auto-columns
-    - grid-auto-flow
+    - `grid-template-rows`
+    - `grid-template-columns`
+    - `grid-template-areas`
+    - `grid-auto-rows`
+    - `grid-auto-columns`
+    - `grid-auto-flow`
 ```
 
 ```
@@ -604,7 +604,7 @@ content는 부모가 위드가 하이트에 공간이 있을때 가로 세로 �
 }
 ```
 
-위 설정을 grid 속기형 속성으로 작성하면 다음과 같습니다.
+위 설정을 `grid` 속기형 속성으로 작성하면 다음과 같습니다.
 
 ```css
 .grid-container {
@@ -612,7 +612,7 @@ content는 부모가 위드가 하이트에 공간이 있을때 가로 세로 �
 }
 ```
 
-column 자동 배치 알고리즘 설정에 암시적인 행/열 크기 설정입니다.
+`column` 자동 배치 알고리즘 설정에 암시적인 행/열 크기 설정입니다.
 
 ```css
 .grid-container {
@@ -622,7 +622,7 @@ column 자동 배치 알고리즘 설정에 암시적인 행/열 크기 설정�
 }
 ```
 
-위의 설절을 속기형으로 작성하면 다음과 같습니다.
+위의 설정을 속기형으로 작성하면 다음과 같습니다.
 
 ```css
 .grid-container {
@@ -632,9 +632,9 @@ column 자동 배치 알고리즘 설정에 암시적인 행/열 크기 설정�
 
 좀 더 복잡하지만 다음 속성을 모두 포함하는 속기형 작성을 사용하면 보다 편리합니다.
     
-    - grid-template-rows
-    - grid-template-columns
-    - grid-template-areas
+    - `grid-template-rows`
+    - `grid-template-columns`
+    - `grid-template-areas`
 
 설정되지 않은 다른 속성은 기본 값으로 설정됩니다.
 
@@ -665,7 +665,7 @@ column 자동 배치 알고리즘 설정에 암시적인 행/열 크기 설정�
 }
 ```
 
-설정이 반복되는 경우 repeat() 함수를 사용하여 손쉽게 설정할 수 있습니다.
+설정이 반복되는 경우 `repeat()` 함수를 사용하여 손쉽게 설정할 수 있습니다.
 
 ```css
 .grid-container {
