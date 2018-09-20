@@ -173,11 +173,12 @@
 
 #### 암시적 그리드 트랙이란?
 
-- 사용자가 설정하지 않은 임의의 트랙으로, 사용자가 명시적으로 grid-template-rows / grid-template-columns 속성을 설정하지 않은 나머지 그리드 트랙을 가리킵니다.
+- 사용자가 설정하지 않은 임의의 트랙으로, 사용자가 명시적으로 `grid-template-rows` / `grid-template-columns` 속성을 설정하지 않은 나머지 그리드 트랙을 가리킵니다.
 
 | 속성 | 값  | 비고|
-| grid-auto-rows | <track-size> ... |   |
-| grid-auto-columns | <track-size> ... | |
+|---|----|----|
+| grid-auto-rows | `<track-size>` ... |   |
+| grid-auto-columns | `<track-size>` ... | |
 
 #### 값
 
@@ -480,10 +481,11 @@ CSS 스타일
 |`justify-content`|`start`|   |
 |   |`center`|    |
 |   |`end`|   |
-|   |`stretch`||
-|   |`space-around`||
-|   |`space-between`||
-|   |`space-evenly`||
+|   |`stretch`| |
+|   |`space-around`|    |
+|   |`space-between`|   |
+|   |`space-evenly`|    |
+
 
 ### 값
 
@@ -559,8 +561,10 @@ CSS 스타일
 
 content는 부모가 위드가 하이트에 공간이 있을때 가로 세로 정렬할수 있다.
 
+
 ## 그리드 단축 속성 설정
 
+```
 - 하나의 속성에 다음 속성들을모두 일괄 설정할 수 있는 grid 속기형 속성입니다.
     - grid-template-rows
     - grid-template-columns
@@ -568,6 +572,7 @@ content는 부모가 위드가 하이트에 공간이 있을때 가로 세로 �
     - grid-auto-rows
     - grid-auto-columns
     - grid-auto-flow
+```
 
 ```
 |속성|값|비고|
@@ -581,16 +586,16 @@ content는 부모가 위드가 하이트에 공간이 있을때 가로 세로 �
 
 ```
 |값|설명|
+|---|---|
 |none| 모든 속성을 초기값으로 적용|
 |`<grid-template-rows>` / `<grid-template-columns>`| `grid-template-rows` `grid-template-columns` 속성 설정|
-|`<grid-auto-flow>` [`<grid-auto-rows>`  [ / `<grid-auto-columns>`] ] |
-`grid-auto-flow` , `grid-auto-rows`, `grid-auto-columns` 속성 설정|
+|`<grid-auto-flow>` [`<grid-auto-rows>`  [ / `<grid-auto-columns>`] ]| `grid-auto-flow` , `grid-auto-rows`, `grid-auto-columns` 속성 설정|
 ```
 
 ### 예시
 
 2행 3열 그리드 설정입니다.
-
+```
 ```css
 .grid-container {
     grid-template-rows: 200px auto;
