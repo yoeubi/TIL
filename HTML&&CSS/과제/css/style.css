@@ -1,0 +1,555 @@
+@charset "utf-8";
+@import './normalize.css';
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700');
+
+/* 스타일 초기화 */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* 숨긴 컨텐츠 */
+.readable-hidden , legend {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0,0,0,0);
+}
+/* 기본 스타일 */
+html {
+  font-size: 10px;
+}
+body {
+  color: #181818;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.main-heading {
+    background: url("../img/sprite_main.png") no-repeat;
+    margin: 1em 0;
+    min-height: 60px;
+    padding: 5px 0 0 65px;
+}
+.en-heading {
+    display: block;
+}
+.book-heading {
+    background-position: 0 0;
+}
+.book-heading .en-heading {
+    color : #abd375;
+}
+.book-cover {
+    width: 75%;
+    margin: 1em auto;
+    text-align: center;
+}
+.book-cover img {
+    max-width: 100%;
+    height: auto;
+}
+.book-detail {
+    text-align: center;
+    margin: 1em 0;
+}
+.book-author , .book-author-name {
+    display: inline-block;
+}
+.book-grade {
+    color: #abd375;
+    font-size: 2em;
+}
+.book-summary {
+    line-height: 1.5;
+    margin: 1em 0;
+}
+.news-heading {
+    background-position: 0 40%;
+}
+.news-heading .en-heading {
+    color: #e8ca58;
+}
+.news-container {
+    margin: 1em 0;
+}
+.news-video {
+    max-width: 100%;
+    height: auto;
+}
+.news-summary {
+    line-height: 1.5;
+    margin: 1em 0;
+}
+.news-date {
+    display: block;
+    text-align: right;
+}
+.board-heading {
+    background-position: 0 20%;
+    margin-bottom: 0.5em;
+}
+.board-heading .en-heading {
+    color: #c7b39a;
+}
+.board-item {
+    margin: 0.5em 0;
+}
+.board-item::before {
+    content : "\f005";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+}
+.board-item a , .board-list time {
+    vertical-align: middle;
+}
+.board-item a {
+    display: inline-block;
+    width: calc(100% - 8em);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0.5em 0;
+}
+.board-more {
+    position: absolute;
+    top: 1.5em;
+    right: -0.5em;
+    padding: 0.5em;
+}
+.board-more::before {
+    content: "\f067";
+    color: #abd375;
+    font-weight: 700;
+    font-family: "Font Awesome 5 Free";
+    margin-right: .2em;
+}
+.favorite-heading {
+    background-position: 0 60%;
+}
+.favorite-heading .en-heading {
+    color: #eea60a;
+}
+.site-list {
+    overflow: hidden;
+}
+.site-list li {
+    counter-increment: number;
+    margin: 1em 0;
+}
+.site-list li::before {
+    content: counter(number ,decimal);
+    background: #eea60a;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0 0.5em;
+    margin-right: 0.5em;
+}
+.twitter-heading {
+    background-position: 0 80%;
+}
+.twitter-heading .en-heading {
+    color: #6aaee6;
+}
+.twitter-user-info {
+    float: left;
+    margin-bottom: 1em;
+    width: calc(100% - 150px);
+}
+.twitter-user-name , .twitter-user-id {
+    float: left;
+}
+.twitter-user-name {
+    color: #6aaee6;
+}
+.twitter-profile {
+    float: right;
+    margin: 0 0 0.5em 1em;
+}
+.twitter-thumbnail {
+    border-radius: 50%;
+    padding: 0.5em;
+    border: 1px solid #333;
+}
+.twitter-summary {
+    line-height: 1.5;
+    margin: 1em 0;
+}
+.twitter-time {
+    display: block;
+    clear: both;
+    text-align: right;
+}
+.twitter-time::before {
+    content: "\f073";
+    font-weight: 400;
+    font-family: "Font Awesome 5 Free";
+    margin-right: 0.2em;
+}
+/* 푸터 */
+.footer-wrapper {
+    background: #988574;
+}
+.footer {
+    text-align: center;
+    padding: 2em 0;
+    color: #fff;
+}
+.address {
+    font-style: normal;
+    margin-bottom: 1em;
+}
+.copyright {
+    font-size: 1em;
+}
+
+@media all and (max-width:999px){
+    body {
+        font-size: 1.6rem;
+    }
+    .container {
+        position: relative;
+    }
+    .header {
+        background: #38302e;
+        padding: 0 1em;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1em;
+    }
+    .logo {
+        margin: 0;
+        padding: .5em 0 .25em;
+    }
+    .member {
+        background: #988574;
+        order : -1;
+        display: flex;
+        justify-content: flex-end;
+        color : #fff;
+        margin : 0 -1em;
+        padding: 0.35em 0;
+    }
+    .member a {
+        display: block;
+        padding: .5em 1em;
+    }
+    .member a:hover , .member a:focus {
+        color : #ffc;
+    }
+    .search input {
+        width: calc(100% - 40px);
+        height: 30px;
+        border : 1px solid #666;
+        border-radius: 5px;
+        margin-right: 5px;
+        padding: 1px 1px 1px 1em;
+    }
+    .btn-search {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        background: transparent;
+    }
+    .btn-search::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: "";
+        background: url("../img/btn_search.png") no-repeat 0 0;
+        background-size: 100%;
+        width: 100%;
+        height: 100%;
+        border:0;
+        padding: 0;
+    }
+    .btn-menubar {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 5em;
+        right: 2em;
+        overflow: hidden;
+        cursor: pointer;
+        background: transparent;
+    }
+    .menubar {
+        background: #fff;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 20%;
+        border-radius: 10px;
+        transition: all 200ms;
+    }
+    .menubar-top {
+        top: 0;
+    }
+    .is-act .menubar-top {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+    .menubar-middle {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .is-act .menubar-middle {
+        transform: translate(-100%,-50%);
+    }
+    .menubar-bottom{
+        top: 100%;
+        transform: translateY(-100%);
+    }
+    .is-act .menubar-bottom{
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+    }
+    .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background: rgba(0,0,0, .85);
+        color: #fff;
+        width: 70vw;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: all 200ms;
+        padding: 50px;
+    }
+    .is-act .menu {
+        transform: translateX(0);
+    }
+    .menu-item {
+        display: block;
+        cursor: pointer;
+        padding: .5em 0;
+        margin: .5em 0;
+    }
+    .sub-menu {
+        display: none;
+        list-style-type: disc;
+        margin-left: 3em;
+    }
+    .menu-act .sub-menu , .menu-item-act + .sub-menu {
+        display: block;
+    }
+    .sub-menu a {
+        display: block;
+        padding: .5em 0;
+        margin: .5em 0;
+    }
+    .main {
+        padding: 0 1em;
+    }
+    .board {
+        position: relative;
+    }
+    .twitter-user-info {
+        width: 65%;
+    }
+    .twitter-profile {
+        width: 30%;
+    }
+    .slogan {
+        padding: 2em 1em 1em 1em;
+    }
+    .footer {
+        text-align: left;
+        padding: 1em;
+    }
+    .address span {
+        display: block;
+    }
+}
+
+@media all and (min-width:1000px){
+    body {
+        font-size: 1.4rem;
+    }
+    .header , .navigation, .main , .slogan , .footer {
+    width: 1000px;
+    margin: 0 auto;
+}
+    /* 헤더 */
+    .header {
+        background: #fff;
+        display: grid;
+        grid-template-columns: repeat(12, 65px);
+        grid-template-rows: 50px 50px;
+        grid-column-gap: 20px;
+        position: relative;
+    }
+    .logo {
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo a , .logo img {
+        display: block;
+    }
+    .member {
+        grid-column: span 3 / -1;
+        grid-row: 1 / span 1;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .member li:not(:first-child)::before {
+        content: "|";
+    }
+    .member a {
+        padding: 0.5em 1em;
+    }
+    .search {
+        grid-column: span 6 / -1;
+        grid-row: 2 / span 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .search fieldset {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    .search input {
+        width: 400px;
+        height: 35px;
+        padding: 2px 2px 2px 10px;
+        border: 1px solid #666;
+        margin-right: 0.5em;
+        border-radius: 5px;
+    }
+    .btn-search {
+        height: 35px;
+        width: 50px;
+        padding: 5px;
+        color: #fff;
+        border: 1px solid #666;
+        background-color: #988574;
+        border-radius: 5px;
+    }
+    /* 네비게이션 */
+    .nav-wrapper {
+        background-color: #988574;
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+    }
+    .navigation {
+        padding-top: 0.5em;
+    }
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        color : #fff;
+    }
+    .menu-item {
+        display: block;
+        cursor: pointer;
+        font-size: 1.8rem;
+        padding: 0.5em 0;
+        font-weight: 700;
+        text-shadow: 0 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000;
+    }
+    .sub-menu {
+        margin-top: 0.5em;
+    }
+    .sub-menu li {
+        margin : 0.5em 0 0.5em 1em;
+    }
+    .sub-menu a {
+        display: block;
+        padding: 0.5em 0;
+    }
+    .sub-menu a:hover , .sub-menu a:focus {
+        color: #ff0;
+    }
+    /* 메인 */
+    .main {
+        display: grid;
+        grid-template-columns: repeat(12, 65px);
+        grid-template-rows: auto auto;
+        grid-column-gap: 20px;
+        grid-template-areas: "book book book book news news news news news news news news"
+                            "board board board board twitter twitter twitter twitter twitter site site site";
+    }
+
+    /* 추천도서 */
+    .book {
+        grid-area: book;
+        position: relative;
+    }
+
+    /* 새소식 */
+    .news {
+        grid-area: news;
+    }
+
+    /* 게시판 */
+    .board {
+        grid-area: board;
+        position: relative;
+    }
+
+    /* 인기 사이트 */
+    .favorite {
+        grid-area: site;
+    }
+
+    /* 트위터 */
+    .twitter {
+        grid-area: twitter;
+    }
+
+    /* 슬로건 */
+    .slogan {
+        position: relative;
+        clear: both;
+        margin-top: 10px;
+    }
+    .slogan-heading {
+        position: absolute;
+        bottom: -35px;
+        width: 110px;
+        height: 83px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .slogan-heading::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: url("../img/coffee.png") no-repeat;
+    }
+    .slogan-content {
+        font-size: 1.6rem;
+        margin: 1em 5em 1em 10em;
+    }
+    .slogan-content q::before {
+        font-size: 5rem;
+        position: relative;
+        top: 2rem;
+    }
+    .slogan-content q::after {
+        content: "";
+    }
+    
+}
