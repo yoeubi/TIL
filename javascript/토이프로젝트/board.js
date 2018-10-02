@@ -151,14 +151,15 @@ const quit = () => {
     process.exit();
 }
 const selectBoardByNo = index => list.find( item => item.no === index );
+const selectIndexByNo = index => list.findIndex( item => item.no === index);
 const listBoard = () => {
     console.log("전체 " + list.length + "개");
     console.log("-------------------------------");
-    console.log("번호	글쓴이	제목");
+    console.log("번호\t글쓴이\t제목");
     console.log("-------------------------------");
     if (list.length != 0) {
         list.forEach( item => {
-            console.log(item.no , item.writer , item.title );
+            console.log(`${item.no}\t${item.writer}\t${item.title}`);
         })
         return;
     }
@@ -170,9 +171,9 @@ const detailBoard = () => {
     let board = selectBoardByNo(index);
     if (board != undefined) {
       console.log("-------------------------------");
-      console.log("번호 : ", board.no);
-      console.log("글쓴이 : ", board.writer);
-      console.log("제목 : ", board.title);
+      console.log(`번호 :\t${board.no}`);
+      console.log(`글쓴이 :\t${board.writer}`);
+      console.log(`제목 :\t${board.title}`);
       console.log("-------------------------------");
       return;
     }
@@ -181,16 +182,17 @@ const detailBoard = () => {
 const addBoard = () => {
     let title = prompt("제목을 입력하세요 :");
     let writer = prompt("글쓴이를 입력하세요 :");
-    let board = {};
-    board.no = ++no;
-    board.title = title;
-    board.writer = writer;
+    let board = {
+        no : ++no,
+        title,
+        writer
+    };
     list.push(board);
     console.log("게시글 등록이 완료되었습니다.");
 }
 const deleteBoard = () => {
     let index = parseInt(prompt("삭제할 글번호를 입력하세요 :"));
-    let item = list.findIndex(item => item.no === index);
+    let item = selectIndexByNo(index);
     if(item < 0) {
         console.log('삭제할 글번호가 존재하지 않습니다.');
         return;
@@ -200,7 +202,7 @@ const deleteBoard = () => {
 }
 const modBoard = () => {
     let index = parseInt(prompt("수정할 글번호를 입력하세요 :"));
-    let item = list.findIndex( item => item.no === index);
+    let item = selectIndexByNo(index);
     if(item < 0) {
         console.log('수정할 글번호가 존재하지 않습니다.');
         return;
@@ -222,22 +224,11 @@ const menu = () => {
 }
 while (true) {
   switch (menu()) {
-    case 1:
-      listBoard();
-      break;
-    case 2:
-      detailBoard();
-      break;
-    case 3:
-      addBoard();
-      break;
-    case 4:
-      modBoard();
-      break;
-    case 5:
-      deleteBoard();
-      break;
-    case 0:
-      quit();
+    case 1: listBoard();    break;
+    case 2: detailBoard();  break;
+    case 3: addBoard();     break;
+    case 4: modBoard();     break;
+    case 5: deleteBoard();  break;
+    case 0: quit();
   }
 }
