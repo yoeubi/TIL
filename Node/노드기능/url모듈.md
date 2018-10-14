@@ -58,7 +58,7 @@ console.log('url.parse() : ' , parsedUrl)
 
 - parse 방식은 기본 노드의 방식이다 URL 은 WHATWG 방식이다. 
 
-- 기존 방식(url.parse)은 호스트가 없을 떄도 슬수 있습니다. WHATWG 방식(url.URL)은 search 처리가 편리합니다.
+- 기존 방식(url.parse)은 호스트가 없을 떄도 쓸 수 있습니다. WHATWG 방식(url.URL)은 search 처리가 편리합니다.
 
 - URL 방식은 장점은 서치 부분을 다룰때 편리하다.
 
