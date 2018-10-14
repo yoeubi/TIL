@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RGB GAME</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="game-title">RGB-GAME</h1>
+            <a class="help" href="https://github.com/yoeubi">help</a>
+        </header>
+        <main class="main">
+            <h2 class="game-stage readable-hidden">RGB-STAGE</h2>
+            <p class="score">SCORE:<span>0</span></p>
+            <div class="game-rgb">
+                <p class="rgb">rgb(67,78,239)</p>
+                <ul class="color-list">
+                    <li class="color-item"><a href="#">color1</a></li>
+                    <li class="color-item"><a href="#">color2</a></li>
+                    <li class="color-item"><a href="#">color3</a></li>
+                </ul>
+            </div>
+        </main>
+        <div class="overlay">
+            <div class="correct">
+                <p>THATS RIGHT!</p>
+                <button class="btn-replay">NEXT COLOR</button>
+            </div>
+            <div class="wrong">
+                <p>TOO BAD :(</p>
+                <p class="score">score:<span>0</span></p>
+                <button class="btn-replay">PLAY AGAIN</button>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
