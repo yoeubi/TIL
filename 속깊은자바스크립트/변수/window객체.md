@@ -58,8 +58,18 @@ function myGlobalFunction(){
 }
 window["myGlobalFunction"]();
 window["myGlobalFunction"].call();
+// window 객체를 통한 글로벌 함수 정의
+(function(){
+    window.myGlobalFunction = function({
+        alert('Global function');
+    })
+}())
+myGlobalFunction();
+myGlobalFunction.call();
 ```
 
 - 일반적인 글로벌 함수로 정의한 함수에도 접근할 수 있으므로, 조건에 따라서 서로 다른 함수에 접근해야 할 때 유용하게 사용 할 수 있다.
 
+- 자바스크립트에서 일반적으로 사용하는 다양한 변수나 값, 그리고 모듈과 함수들이 window 객체에 들어가 있다.
 
+- 숫자가 아닌 값 NaN이나 자바스크립트 기본 자료형 중 하나인 undefined까지 window 객체의 속성이다.
