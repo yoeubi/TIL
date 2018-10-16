@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 30px;
+            width: 30px;
+            background-color: blue;
+            position: absolute;
+        }
+
+        .box.hover {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        const boxEl = document.querySelector('.box');
+        const position = boxEl.getBoundingClientRect();
+        let static;
+        let flag = false;
+        boxEl.addEventListener('mousedown', e => {
+            flag = true;
+            static = {
+                x: e.offsetX,
+                y: e.offsetY
+            }
+        })
+        document.addEventListener('mousemove', e => {
+            console.log(e.offsetX , e.offsetY);
+            
+            if (flag) {
+                boxEl.style.left = e.clientX - static.x + 'px';
+                boxEl.style.top = e.clientY - static.y + 'px';
+            }
+        })
+        boxEl.addEventListener('mouseup', e => {
+            flag = false;
+        })
+    </script>
+</body>
+
+</html>
