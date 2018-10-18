@@ -228,4 +228,3 @@ git push origin develop
 - git flow start abc 하면 브랜치만들어주고 넘어간다
 
 - git flow finish abc 하면 브랜치가 병합되고 사라진다.
-
