@@ -8,17 +8,17 @@
 1. TypeScript
 1. YOU DON'T KNOW JS
 
-# 인강 내용 정리
+## 인강 내용 정리
 
 1. frontendStart
 1. Node
 
-# 프론트엔드 스쿨 내용 정리
+## 프론트엔드 스쿨 내용 정리
 
 1. HTML&&CSS
 1. javascript
 
-# 수학 및 알고리즘
+## 수학 및 알고리즘
 
 1. math
 1. Sort
