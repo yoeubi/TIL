@@ -1,0 +1,81 @@
+#mine {
+    width: 281px;
+    margin: 5% auto;
+}
+
+table {
+    border: 1px solid black;
+    user-select: none;
+    border-collapse: collapse;
+}
+
+th,td {
+    border: 1px solid black;
+    cursor: pointer;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    text-align: center;
+    width: 25px;
+    font-weight: bold;
+    background: #f8f9fa;
+    font-size: 1.5rem;
+}
+
+td:hover {
+    background: #dee2e6;
+}
+
+.title {
+    width: 145px;
+    margin: 5% auto;
+    position: relative;
+}
+
+.title a {
+    display: block;
+    width: 145px;
+    height: 30px;
+    color: #00d2ff;
+    transition: color .15s ease-in-out;
+    text-decoration: none;
+}
+
+.title a svg {
+    width: 100%;
+    fill: currentColor;
+}
+
+.title p {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.bomb {
+    background: #e03131;
+    color: white;
+}
+
+.bomb:hover {
+    background: #495057;
+}
+
+.one {
+    color: #4263eb;
+}
+
+.two {
+    color: #37b24d;
+}
+
+.three {
+    color: #fab005;
+}
+
+.four {
+    color: #15aabf;
+}
+
+.five {
+    color: #fd7e14;
+}
