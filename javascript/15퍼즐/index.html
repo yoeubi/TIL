@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>15 PUZZLE</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <main class="main">
+            <h1 class="game-title">15 PUZZLE</h1>
+            <div>
+                <p class="display-board">
+                Moves: <span class="moveCnt">0</span>
+                Timer: <span class="timer">0</span>
+                </p>
+            </div>
+            <div class="puzzle-board">
+                <div class="board">
+                    <div class="cell" data-index="0">1</div>
+                    <div class="cell" data-index="1">2</div>
+                    <div class="cell" data-index="2">3</div>
+                    <div class="cell" data-index="3">4</div>
+                    <div class="cell" data-index="4">5</div>
+                    <div class="cell" data-index="5">6</div>
+                    <div class="cell" data-index="6">7</div>
+                    <div class="cell" data-index="7">8</div>
+                    <div class="cell" data-index="8">9</div>
+                    <div class="cell" data-index="9">10</div>
+                    <div class="cell" data-index="10">11</div>
+                    <div class="cell" data-index="11">12</div>
+                    <div class="cell" data-index="12">13</div>
+                    <div class="cell" data-index="13">14</div>
+                    <div class="cell" data-index="14">15</div>
+                    <div class="cell empty" data-index="15"></div>
+                </div>
+            </div>
+            <button class="btn-replay">replay</button>
+        </main>
+    </div>
+    <script defer>
+        (function(){
+            const timerEl = document.querySelector('.timer');
+            const timer = () => {
+                timerEl.textContent = 0;
+                return setInterval(() => {
+                    timerEl.textContent = +timerEl.textContent + 1;
+                }, 1000)
+            }
+            let timerId = timer();
+            const emptyEl = document.querySelector('.empty');
+            const moveCntEl = document.querySelector('.moveCnt');
+            const cellEl = document.querySelectorAll('.cell');
+            let moveCnt = 0;
+            const replay = () => {
+                clearInterval(timerId);
+                timerId = timer();
+                moveCntEl.textContent = moveCnt = 0;
+                setPuzzle(makePuzzle());
+            }
+            const init = () => {
+                const moveFlag = [1, -1, 4, -4];
+                for (let i = 0; i < 15; i++) {
+                    let cellEl = document.querySelector(`.cell[data-index="${i}"]`);
+                    cellEl.addEventListener('click', function () {
+                        moveCntEl.textContent = ++moveCnt;
+                        let emptyIdx = emptyEl.dataset["index"];
+                        let cellIdx = cellEl.dataset["index"];
+                        if (moveFlag.includes(emptyIdx - cellIdx)) {
+                            let temp = cellIdx;
+                            cellEl.dataset["index"] = emptyIdx;
+                            emptyEl.dataset["index"] = temp;
+                            if(success(document.querySelectorAll(".cell"))){
+                                setTimeout(() => {
+                                    alert('퍼즐을 푸셨습니다.')
+                                    replay();
+                                },300)
+                            }
+                        }
+                    })
+                }
+            }
+            const success = arr => {
+                let count = 0;
+                let flag = arr.forEach( (item,index) => {
+                    if(+item.dataset.index === index){
+                        count++;
+                    }
+                })
+                return count === arr.length;
+            }
+            init();
+            const isValid = arr => {
+                let count = 0;
+                for (let i = 0 , k = arr.length; i < k; i++) {
+                    for (let j = 0; j < i; j++) {
+                        if(arr[i] < arr[j]){
+                            count++;
+                        }
+                    }
+                }
+                return count % 2 === 0;
+            }
+            const makePuzzle = () => {
+                const idxArr = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+                let mixed = idxArr.slice(0).sort(() => Math.round(Math.random()) - 0.5);
+                while (!isValid(mixed)) {
+                    mixed = idxArr.slice().sort(() => Math.round(Math.random()) - 0.5);
+                }
+                return mixed;
+            }
+            const setPuzzle = (arr) => {
+                cellEl.forEach( (item, index) => {
+                    if(index < 15){
+                        item.dataset.index = arr[index];
+                    } else {
+                        item.dataset.index = 15;
+                    }
+                })
+            }
+            setPuzzle(makePuzzle());
+            const replayEl = document.querySelector('.btn-replay');
+            
+            replayEl.addEventListener('click', () => {
+                replay();
+            })
+        })()
+        
+    </script>
+</body>
+</html>

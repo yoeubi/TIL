@@ -1,0 +1,115 @@
+@charset "utf-8";
+.container {
+  text-align: center;
+  background: #f0f1d5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  width: 300px;
+}
+.game-title {
+  color: #181818;
+  background: rgb(220, 100, 102);
+  font-size: 4rem;
+  padding: 3rem 5rem;
+}
+.display-board {
+  background-color: #181818;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem 1.5rem;
+}
+.btn-replay {
+  display: block;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #181818;
+  color: #fff;
+  font-size: 2rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+.puzzle-board {
+  background: #181818;
+  width: 100%;
+  height: 300px;
+}
+.board {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.cell {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(25% - 2px);
+  height: calc(25% - 2px);
+  margin: 1px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 5px;
+}
+.empty {
+  background-color: transparent;
+  cursor: auto;
+}
+.cell[data-index="0"] {
+  transform: translate(calc(0% + 0px), calc(0% + 0px));
+}
+.cell[data-index="1"] {
+  transform: translate(calc(100% + 2px), calc(0% + 0px));
+}
+.cell[data-index="2"] {
+  transform: translate(calc(200% + 4px), calc(0% + 0px));
+}
+.cell[data-index="3"] {
+  transform: translate(calc(300% + 6px), calc(0% + 0px));
+}
+
+.cell[data-index="4"] {
+  transform: translate(calc(0% + 0px), calc(100% + 2px));
+}
+.cell[data-index="5"] {
+  transform: translate(calc(100% + 2px), calc(100% + 2px));
+}
+.cell[data-index="6"] {
+  transform: translate(calc(200% + 4px), calc(100% + 2px));
+}
+.cell[data-index="7"] {
+  transform: translate(calc(300% + 6px), calc(100% + 2px));
+}
+
+.cell[data-index="8"] {
+  transform: translate(calc(0% + 0px), calc(200% + 4px));
+}
+.cell[data-index="9"] {
+  transform: translate(calc(100% + 2px), calc(200% + 4px));
+}
+.cell[data-index="10"] {
+  transform: translate(calc(200% + 4px), calc(200% + 4px));
+}
+.cell[data-index="11"] {
+  transform: translate(calc(300% + 6px), calc(200% + 4px));
+}
+
+.cell[data-index="12"] {
+  transform: translate(calc(0% + 0px), calc(300% + 6px));
+}
+.cell[data-index="13"] {
+  transform: translate(calc(100% + 2px), calc(300% + 6px));
+}
+.cell[data-index="14"] {
+  transform: translate(calc(200% + 4px), calc(300% + 6px));
+}
+.cell[data-index="15"] {
+  transform: translate(calc(300% + 6px), calc(300% + 6px));
+}
