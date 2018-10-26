@@ -39,15 +39,8 @@
             })
         }
     }
-    const success = arr => {
-        let count = 0;
-        let flag = arr.forEach((item, index) => {
-            if (+item.dataset.index === index) {
-                count++;
-            }
-        })
-        return count === arr.length;
-    }
+    const success = arr => Array.from(arr).every((item,index) => parseInt(item.dataset.index) === index )
+        
     init();
     const isValid = arr => {
         let count = 0;
@@ -62,10 +55,12 @@
     }
     const makePuzzle = () => {
         const idxArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
-        let mixed = idxArr.slice(0).sort(() => Math.round(Math.random()) - 0.5);
-        while (!isValid(mixed)) {
-            mixed = idxArr.slice().sort(() => Math.round(Math.random()) - 0.5);
-        }
+        let mixed;
+        do {
+            mixed = idxArr
+              .slice()
+              .sort(() => Math.round(Math.random()) - 0.5);
+        } while (!isValid(mixed));
         return mixed;
     }
     const setPuzzle = (arr) => {
