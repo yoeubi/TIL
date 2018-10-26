@@ -68,6 +68,7 @@
     start = flag = false;
     startBtnEl.textContent = "GAME START";
     whiteTimerEl.textContent = blackTimerEl.textContent = "00:00";
+    whiteTime = blackTime = 0;
     clearInterval(timerID);
   };
   /* 시작 버튼 엘리먼트*/
