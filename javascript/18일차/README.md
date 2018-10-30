@@ -204,7 +204,7 @@ exports.sub = (x, y) => x - y
     - `GET`
         - `GET` 메소드는 특정 리소스의 표시를 요청한다.. `GET`을 사용하는 요청은 오직 데이터를 받기만 한다.
         - `GET` 메소드는 정보를 달라는 것
-    - `POST`: 서버에 등록하는 게 아니라, 정보를 받아올 때는 `POST` 메소드를 사용
+    - `POST`: 서버에 등록하기도 하고 정보를 받아올때는 `POST`메서드
         - 웹 브라우저는 **특정 상황에서 특정 메소드로 요청을 보내도록 만들어져 있음.** 제출할 때 사용.
         - `POST` 메소드는 특정 리소스에 엔티티를 제출할 때 쓰임. 이는 종종 서버의 상태의 변화나 부작용을 일으킨다. 
     - `PUT`: PUT 메소드는 목적 리소스 모든 현재 표시를 요청 payload로 바꾼다.
@@ -233,7 +233,7 @@ exports.sub = (x, y) => x - y
 - ex) https://www.google.com/search?source=hp&ei=PaDWW7T7EImz8QWZ8ZKoCg&q=http&oq=http&gs_l=psy-ab.3..0i131k1l5j0j0i131k1j0i3k1j0l2.989.1350.0.1568.4.3.0.1.1.0.138.248.0j2.2.0....0...1c.1.64.psy-ab..1.3.255....0._7JtWYsiHlc
 ---
 
-[해시태그(#)](https://s.codepen.io/dbeat999/debug/pxBJNO/yoAZEWKOwOZr)
+[해시태그(#)](https://codepen.io/dbeat999/pen/pxBJNO)
 -  챕터1: https://s.codepen.io/dbeat999/debug/pxBJNO/yoAZEWKOwOZr#chapter-1
 -  챕터2: https://s.codepen.io/dbeat999/debug/pxBJNO/yoAZEWKOwOZr#chapter-2
 -  url에서 해시태그(#) 뒷 부분이 바뀐다.
