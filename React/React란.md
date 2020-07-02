@@ -77,3 +77,9 @@ HTML에서 돔 요소에 직접 스타일을 적용하는 것과 같이 JSX에�
 JSX 문법은 자바스크립트 표준이 아니기 떄문에 그대로 실행하면 에러가 발생한다
 
 바벨을 이용해서 JSX 문법으로 작성된 파일을 createElement 함수로 작성된 파일로 변환해야한다.
+
+```js
+npm install @babel/core @babel/cli @babel/preset-react
+```
+
+@babel/cli 는 커맨드 라인에서 바벨을 실행할수 있는 바이너리 파일이 들어 있다.
