@@ -83,3 +83,27 @@ npm install @babel/core @babel/cli @babel/preset-react
 ```
 
 @babel/cli 는 커맨드 라인에서 바벨을 실행할수 있는 바이너리 파일이 들어 있다.
+
+@babel/preset-react는 JSX로 작성된 코드를 createElement 함수를 이용한 코드를 변환해주는 바벨 플러그인이 있다.
+
+## 바벨 플러그인과 프리셋
+
+바벨은 자바스크립트 파일을 입력으로 받아서 또 다른 자바스크립트 파일을 출력으로 준다.
+
+자바스크립트 파일을 변환해주는 작업은 플러그인 단위로 이루어진다.
+
+하나의 목적을 위해 여러 개의 플러그인이 필요할 수 있는데 이러한 플러그인의 집합을 프리셋이라고 부른다.
+
+```js
+npx babel --watch src --out-dir . --presets @babel/preset-react
+```
+
+npx 명령어는 외부 패키지에 포함된 실행 파일을 실행할때 사용된다.
+
+외부 패키지의 실행 파일은 ./node_modules/.bin/ 밑에 저장된다.
+
+따라서 npx babel은 ./node_modules/.bin/babel을 입력하는 것과 비슷하다.
+
+위 명령어를 실행하면 src 폴더에 있는 모든 자바스크립트 파일을 @babel/preset-react 프리셋을 이용해서 변환 후 현재 폴더에 같은 이름의 자바스크립트 파일을 생성한다.
+
+watch 모드로 실행했기 때문에 src 폴더의 자바스크립트 파일을 수정할 때마다 자동으로 변환후 저장한다.
