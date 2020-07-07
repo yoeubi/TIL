@@ -229,6 +229,13 @@ create-react-app에서는 https로 실행하는 옵션을 제공한다.
 1. 파일 이름이 .test.js로 끝나는 파일
 1. 파일 이름이 .spec.js로 끝나는 파일
 
+테스트 프로그램이 watch 모드로 동작하고 있다
+
+CI와 같이 watch 모드가 필요없는 환경에서는 다음과 같은 명령어로 테스트 코드를 실행한다.
+
+맥: CI=true npm test
+윈도우: set "CI=true" && npm test
+
 ## 설정 파일 추출하기
 
 npm run eject를 실행하면 숨겨져 있던 create-react-app 의 내부 설정 파일이 밖으로 노출된다.
@@ -240,3 +247,24 @@ npm run eject를 실행하면 숨겨져 있던 create-react-app 의 내부 설�
 리액트 툴체인에 익숙한 사람이 아니라면 추천하지 않는다.
 
 npm run eject 외에도 creat-react-app 의 설정을 변경할 방법이 있다.
+
+1. react-scripts 프로젝트를 포크해서 나만의 스크립트를 만든다.
+1. react-app-rewired 패키지를 사용한다.
+
+1은 자유도가 높기 때문에 원하는 부분을 얼마든지 수정할 수 있다.
+
+수정된 내용을 여러 프로젝트에서 공통으로 사용할 수 있다는 장점도 있다.
+
+2는 자유도는 낮지만 비교적 쉽게 설정을 변경할 수 있다는 장점이 있다.
+
+하지만 두 가지 방법 모두 create-react-app의 이후 버전에 변경된 내용을 쉽게 적용할 수 없다는 단점이 있다.
+
+## 자바스크립트 지원 범위
+
+create-react-app의 기본 설정에서는 아무런 폴리필이 포함되지 않는다.
+
+corejs 패키지를 사용하면 다양한 폴리필을 선택적으로 사용할 수 있다.
+
+npm install core-js
+
+index.js 파일에서 한번만 가져오면 모든 곳에서 자유롭게 사용할 수 있다.
