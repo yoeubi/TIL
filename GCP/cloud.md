@@ -55,8 +55,4 @@ GCP에서 작업을 돌릴떄 프로젝트를 사용해서 구성합니다.
 
 IM, IAM은 누가 무엇을 할 수 있는지 제어할 수 있습니다.
 
-asdfasdfasdf
-
-dfttetdsgdfgdfg
-
-asdfasdfsdfsdf
+# Google Cloud Platform 리소스 계층
