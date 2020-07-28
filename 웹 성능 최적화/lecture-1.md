@@ -90,3 +90,11 @@ Contents Delivery Network
 ### Image processing CDN
 
 CDN 개념과 이미지를 특정형태로 가공해서 사용자에게 전해주는 것
+
+## bottleneck
+
+minify javascript
+
+자바스크립트를 미니파이하르는 것
+코드를 공백또는 주석을 제거해서 파일 크기를 줄이는 것
+프로덕션에서 알아서 미니파이 해준다.
