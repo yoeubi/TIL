@@ -106,5 +106,3 @@ minify main threde work
 ## Performance 탭
 
 페이지가 로드되면서 실행되는 작업들을 타임라인과 차트로 보여준다.
-
-asdfsdfasdf
